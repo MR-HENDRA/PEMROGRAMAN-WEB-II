@@ -1,9 +1,9 @@
 <?php
 class Mobil
 {
-    var $warna;
-    var $merk;
-    var $harga;
+    public $warna;
+    public $merk;
+    public $harga;
     function __construct()
     {
         $this->warna = "Biru";
