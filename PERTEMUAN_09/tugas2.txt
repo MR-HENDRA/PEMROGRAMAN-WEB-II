@@ -1,0 +1,46 @@
+<?php
+// contoh class
+class mahasiswa
+{
+    public $nama;
+    public $jenis_kelamin;
+
+    public $prodi;
+    public function isidata($nama, $jenis_kelamin)
+
+    {
+        $this->nama = $nama;
+        $this->jenis_kelamin = $jenis_kelamin;
+        
+    }
+
+    public function cetakdata()
+    {
+        echo "BIODATA" . "<br>";
+        echo "Nama: " . $this->nama . "<br>";
+        echo "Jenis Kelamin: " . $this->jenis_kelamin . "<br>";
+        
+    }
+
+    public function inputdata()
+    {
+        echo "
+        <form action='' method='post'>
+        Nama : 
+        <input type='text' name='nama'><br>
+        Jenis Kelamin : 
+        <input type='radio' name='jenis_kelamin' value='laki-laki' id='laki-laki' required />
+        <label for='laki-laki'>Laki-Laki</label>
+        <input type='radio' name='jenis_kelamin' value='perempuan' id='perempuan' />
+        <label for='perempuan'>Perempuan</label><br>
+
+        <input type='submit' name='tombol' value='Input Mhs'>";
+    }
+
+    public function terimadata()
+    {
+        $this->nama = $_POST['nama'];
+        $this->jenis_kelamin = $_POST['jenis_kelamin'];
+        
+    }
+}
